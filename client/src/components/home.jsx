@@ -54,7 +54,7 @@ handleCloseModal () {
  async  submitPost(e){
   e.preventDefault()
   const userPost=this.state
-await fetch('http://localhost:8000/users',{
+await fetch('/users',{
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -81,7 +81,7 @@ await fetch('http://localhost:8000/users',{
     async Postdel(e){
       let id = e.target.id
       console.log(id)
-      await fetch('http://localhost:8000/users/remove/'+id, {
+      await fetch('/users/remove/'+id, {
           method: 'DELETE',
           headers: {
             'Accept': 'application/json',
@@ -102,7 +102,7 @@ await fetch('http://localhost:8000/users',{
   let id=e.target.id
   console.log(id)
 const userPost=this.state
-await fetch('http://localhost:8000/users/update/'+id, {
+await fetch('/users/update/'+id, {
      method: 'PUT',
     headers: {
       'Accept': 'application/json',
